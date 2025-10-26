@@ -1,11 +1,11 @@
 import React from "react";
 import ExploreButton from "./ExploreButton";
 import { assets } from "../assets/assets";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const Navbar = () => {
-  const percentage = 87;
+  const percentage = 66;
   return (
     <nav className="opacity-100 flex justify-between py-8 px-10 mb-10">
       <div className="flex items-center justify-center gap-5">
