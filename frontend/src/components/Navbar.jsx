@@ -7,7 +7,7 @@ import "react-circular-progressbar/dist/styles.css";
 const Navbar = () => {
   const percentage = 66;
   return (
-    <nav className="opacity-100 flex justify-between py-8 px-10 mb-10">
+    <nav className="opacity-100 flex justify-between pt-8 px-10 mb-10">
       <div className="flex items-center justify-center gap-5">
         <img className="h-5 w-35 inline-block" src={assets.logo} alt="" />
         <ExploreButton />

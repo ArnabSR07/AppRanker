@@ -1,15 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product, isHovered }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (id)=>{
+     navigate(`/product/${id}`)
+  }
 
   let reducedTitle = product.title;
-  if(product.title.length > 10 && !isHovered){
-     reducedTitle = product.title.slice(0, 10) + '...';
+  let reducedDescription = product.description;
+
+  if (product.title.length > 10 && !isHovered) {
+    reducedTitle = product.title.slice(0, 10) + "...";
   }
-  
+  if (product.description.length > 15 && !isHovered) {
+    reducedDescription = product.description.slice(0, 10) + "...";
+  }
+
   return (
+
     <motion.div
+    onClick={()=>handleClick(product.id)}
       className="relative z-20 border border-gray-500 p-2 bg-black rounded-2xl h-[60%] opacity-100 cursor-pointer hover:rounded-2xl"
       animate={{
         scale: isHovered ? 1.03 : 1,
@@ -31,7 +44,7 @@ const ProductCard = ({ product, isHovered }) => {
           <div className="text-lg font-bold text-white inline-block">
             {reducedTitle}
           </div>
-          <div className="text-gray-500 text-sm">{product.description}</div>
+          <div className="text-gray-500 text-sm">{reducedDescription}</div>
         </div>
 
         <div>

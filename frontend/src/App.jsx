@@ -3,6 +3,9 @@ import { BrowserRouter as Router,Routes,Route, BrowserRouter } from "react-route
 import Home from "./pages/Home";
 import StarBackground from "./components/StarBackground";
 import RankerContextProvider from "./context/RankerContext";
+import Product from "./pages/Product";
+import MainLayout from "./layouts/MainLayout";
+import Comparision from "./pages/Comparision";
 
 function App() {
   return <>
@@ -11,7 +14,11 @@ function App() {
       <RankerContextProvider>
       <StarBackground/>
     <Routes>
+       <Route path="/" element={<MainLayout />}>
       <Route path="/" element={<Home/>}/>
+      <Route path="/product/:productId" element={<Product/>}/>
+      <Route path="/comparision" element={<Comparision/>}/>
+      </Route>
     </Routes>
     </RankerContextProvider>
     </Router>

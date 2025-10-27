@@ -2,12 +2,12 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='absolute flex text-lg items-center justify-center text-gray-500 gap-8 bg-transparent w-full bottom-0'>
+    <div className='flex text-lg items-center justify-center text-gray-500 gap-8 bg-transparent w-full'>
 
-        <span>Terms</span>
-        <span>Privacy</span>
-        <span>Help</span>
-        <span>Send Feedback</span>
+        <span className='hover:cursor-pointer hover:text-white'>Terms</span>
+        <span className='hover:cursor-pointer hover:text-white'>Privacy</span>
+        <span className='hover:cursor-pointer hover:text-white'>Help</span>
+        <span className='hover:cursor-pointer hover:text-white'>Send Feedback</span>
 
     </div>
   )

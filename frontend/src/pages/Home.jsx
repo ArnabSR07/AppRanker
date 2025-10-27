@@ -11,7 +11,7 @@ const Home = () => {
 
     <div className='light'
     >
-         <Navbar/>
+       
          <Hero/>
          <SearchBar/>
          <SearchResultsList/>

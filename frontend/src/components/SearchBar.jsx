@@ -18,7 +18,7 @@ const SearchBar = () => {
           value={search}
           onChange={(e)=>setSearch(e.target.value)}
           placeholder="Search..."
-          className="bg-black text-white py-6 px-5 pr-24 border border-gray-600 rounded-2xl w-full focus:outline-none"
+          className="bg-black text-white py-5 px-5 pr-24 border border-gray-600 rounded-2xl w-full focus:outline-none"
         />
         <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
           <ExploreButton />
