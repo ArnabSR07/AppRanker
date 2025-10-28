@@ -3,3 +3,13 @@
 button:hover{
     cursor: pointer;
 }
+
+#decision{
+  background:linear-gradient(to right,rgb(0, 72, 255),rgb(14, 158, 14));
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-box{
+    background:linear-gradient(to right bottom,#133b51 10%,#021b29);
+}

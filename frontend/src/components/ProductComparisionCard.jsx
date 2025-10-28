@@ -25,7 +25,7 @@ const ProductComparisionCard = ({ product }) => {
 
       {/* Image */}
       <img
-        src={product.image}
+        src={product.images[0]}
         alt={product.title}
         className="rounded-xl mb-4 border h-[30%] border-neutral-700"
       />

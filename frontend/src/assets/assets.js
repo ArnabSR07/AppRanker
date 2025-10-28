@@ -14,6 +14,19 @@ import filmoralogo from "./filmoralogo.webp";
 import imovie from "./imovie.jpg";
 import imovielogo from "./imovielogo.jpg";
 import tick from "./tick.png";
+import gpt1 from "./gpt1.webp"
+import gpt2 from "./gpt2.avif"
+import gpt3 from "./gpt3.jpg"
+import gpt4 from "./gpt4.avif"
+import gpt5 from "./gpt5.webp"
+import pilot1 from "./pilot1.webp"
+import pilot2 from "./pilot2.webp"
+import pilot3 from "./pilot3.webp"
+import pilot4 from "./pilot4.avif"
+import brains1 from "./brains1.jpg"
+import brains2 from "./brains2.jpg"
+import brains3 from "./brains3.webp"
+import brains4 from "./brains4.png"
 
 export const assets = {
   profile,
@@ -28,6 +41,7 @@ export const products = [
     icon: gptlogo,
     badge:"Editor's Pick",
     image: chatgpt,
+    images:[chatgpt,gpt1,gpt2,gpt3,gpt4,gpt5],
     title: "Chat GPT",
     description: "AI powered Chat Bot",
     oldPrice: 10,
@@ -52,6 +66,7 @@ export const products = [
     icon: copilotlogo,
     badge:"Best Price",
     image: copilot,
+    images:[copilot,pilot1,pilot2,pilot3,pilot4],
     title: "Copilot",
     description: "Code Automation Tool",
     oldPrice: 10,
@@ -76,6 +91,7 @@ export const products = [
     icon: brainslogo,
     badge:"Best Rating",
     image: jetbrains,
+    images:[jetbrains,brains1,brains2,brains3,brains4],
     title: "Jetbrains AI",
     description: "Intelligent Coding Tool",
     oldPrice: 10,
@@ -99,6 +115,7 @@ export const products = [
     id: "aaad",
     icon: adobelogo,
     image: adobePremier,
+    images:[adobePremier],
     badge:"Best Price",
     title: "Adobe Premiere Pro",
     description: "Intelligent Video Editing Tool",
@@ -124,6 +141,7 @@ export const products = [
     icon: imovielogo,
     badge:"Editor's Pick",
     image: imovie,
+    images:[imovie],
     title: "iMovie",
     description: "Video Editing Made Easy",
     oldPrice: 10,
@@ -148,6 +166,7 @@ export const products = [
     icon: filmoralogo,
     badge:"Best Rating",
     image: filmora,
+    images:[filmora],
     title: "Filmora",
     description: "Video Editing at your Fingertips",
     oldPrice: 10,

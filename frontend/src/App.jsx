@@ -6,6 +6,7 @@ import RankerContextProvider from "./context/RankerContext";
 import Product from "./pages/Product";
 import MainLayout from "./layouts/MainLayout";
 import Comparision from "./pages/Comparision";
+import ImpactDashboard from "./pages/ImpactDashboard";
 
 function App() {
   return <>
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/product/:productId" element={<Product/>}/>
       <Route path="/comparision" element={<Comparision/>}/>
+      <Route path="/impact-dashboard" element={<ImpactDashboard/>} />
       </Route>
     </Routes>
     </RankerContextProvider>
