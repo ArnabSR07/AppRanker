@@ -1,6 +1,6 @@
 import logo from "./logo.png";
 import profile from "./profile.jpg";
-import plus from "./greenplus.png";
+import plus from "./greenPlus.png";
 import copilot from "./copilot.jpg";
 import jetbrains from "./jetbrains.jpeg";
 import chatgpt from "./chatgpt.png";
