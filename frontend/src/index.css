@@ -13,3 +13,24 @@ button:hover{
 .dashboard-box{
     background:linear-gradient(to right bottom,#133b51 10%,#021b29);
 }
+
+
+/* CYAN CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #06b6d4;       /* cyan-500 */
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #22d3ee;       /* cyan-400 */
+  box-shadow: 0 0 10px #22d3ee;    /* glowing hover effect */
+}

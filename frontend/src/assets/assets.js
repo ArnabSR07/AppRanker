@@ -60,6 +60,14 @@ export const products = [
       "Comments",
       "Components",
     ],
+    pricing:30,
+    vendor:"Open AI",
+    codeEditor:true,
+    debugger:true,
+    versionControl:true,
+    leadManagement:true,
+    salesAutomation:true,
+    customerSupport:true
   },
   {
     id: "aaab",
@@ -85,6 +93,14 @@ export const products = [
       "Comments",
       "Components",
     ],
+    pricing:40,
+    vendor:"Microsoft Inc.",
+    codeEditor:true,
+    debugger:true,
+    versionControl:false,
+    leadManagement:false,
+    salesAutomation:false,
+    customerSupport:true
   },
   {
     id: "aaac",
@@ -110,6 +126,14 @@ export const products = [
       "Comments",
       "Components",
     ],
+    pricing:30,
+    vendor:"IntelliJ",
+    codeEditor:true,
+    debugger:true,
+    versionControl:false,
+    leadManagement:false,
+    salesAutomation:false,
+    customerSupport:false
   },
   {
     id: "aaad",
@@ -135,6 +159,14 @@ export const products = [
       "Comments",
       "Components",
     ],
+    pricing:50,
+    vendor:"Adobe Inc.",
+    codeEditor:false,
+    debugger:false,
+    versionControl:false,
+    leadManagement:true,
+    salesAutomation:true,
+    customerSupport:true
   },
   {
     id: "aaae",
@@ -160,6 +192,14 @@ export const products = [
       "Comments",
       "Components",
     ],
+    pricing:30,
+    vendor:"IMovie Inc.",
+    codeEditor:false,
+    debugger:true,
+    versionControl:true,
+    leadManagement:false,
+    salesAutomation:true,
+    customerSupport:true
   },
   {
     id: "aaaf",
@@ -185,5 +225,13 @@ export const products = [
       "Comments",
       "Components",
     ],
+    pricing:40,
+    vendor:"Filmora ComapversionControl",
+    codeEditor:true,
+    debugger:true,
+    versionControl:false,
+    leadManagement:false,
+    salesAutomation:false,
+    customerSupport:true
   },
 ];

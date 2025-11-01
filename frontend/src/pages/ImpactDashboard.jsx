@@ -1,4 +1,9 @@
-import React, { useEffect, useState } from "react"; // 🟩 added useState, useEffect
+import React, { useEffect, useState } from "react";
+import { CiPen } from "react-icons/ci";
+import { RiGroupLine } from "react-icons/ri";
+import { FaRegHeart } from "react-icons/fa";
+import { BsStars } from "react-icons/bs";
+
 
 const Counter = ({ target }) => {
   const [count, setCount] = useState(0);
@@ -56,6 +61,7 @@ const ImpactDashboard = () => {
           </div>
         </div>
 
+      
         <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center">
           <h3 className="text-gray-400">Impact Score</h3>
           <h4 className="text-5xl font-bold text-white my-8">
@@ -63,6 +69,8 @@ const ImpactDashboard = () => {
           </h4>
           <p className="text-lg text-gray-400 text-center">Total Points</p>
         </div>
+
+       
 
         <div className="flex flex-col justify-center items-center gap-10">
           <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500">
@@ -92,29 +100,49 @@ const ImpactDashboard = () => {
 
    <div className=" relative z-20 dashboard-box grid grid-cols-4 rounded-md w-full gap-5 my-10 p-5">
 
-    <div className=" flex flex-col justify-between items-start gap-3">
+    <div className="flex">
+      
+    <div className="border border-green-500 h-10 flex items-center justify-center rounded-xl bg-green-900 me-4"><BsStars className="h-6 w-10 text-green-400" /></div>
+    <div className=" flex flex-col justify-between w-full items-start gap-3">
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Daily Site Login</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit Comaprision Page</p><span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Watch Demo Video</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit New Product Page</p> <span className="text-green-500">+15</span> </div>
     </div>
-    <div className="flex flex-col justify-between items-start gap-3">
+    </div>
+    
+    <div className="flex">
+      <div className="border border-green-500 h-10 w-10 flex justify-center items-center rounded-xl bg-green-900  me-4"><CiPen className="h-8 w-10 text-green-400" /></div>
+    <div className="flex flex-col justify-between w-full items-start gap-3">
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Daily Site Login</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit Comaprision Page</p><span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Watch Demo Video</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit New Product Page</p> <span className="text-green-500">+15</span> </div>
     </div>
-    <div className="flex flex-col justify-between items-start gap-3">
+    </div>
+
+    <div className="flex">
+      <div className="border border-green-500 h-10 w-10 flex items-center justify-center rounded-xl bg-green-900  me-4"><RiGroupLine className="h-6 w-10 text-green-400" /></div>
+    
+    <div className="flex flex-col justify-between w-full items-start gap-3">
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Daily Site Login</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit Comaprision Page</p><span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Watch Demo Video</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit New Product Page</p> <span className="text-green-500">+15</span> </div>
     </div>
-    <div className="flex flex-col justify-between items-start gap-3">
+</div>
+
+<div className="flex">
+  <div className="border border-green-500 h-10 w-10 flex items-center justify-center rounded-xl bg-green-900  me-4"><FaRegHeart className="h-6 w-10 text-green-500" /></div>
+
+
+
+    <div className="flex flex-col justify-between w-full items-start gap-3">
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Daily Site Login</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit Comaprision Page</p><span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Watch Demo Video</p> <span className="text-green-500">+15</span> </div>
         <div className="flex items-start justify-between  w-full text-gray-300"><p>Visit New Product Page</p> <span className="text-green-500">+15</span> </div>
+    </div>
     </div>
 
    </div>
