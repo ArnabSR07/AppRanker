@@ -21,7 +21,7 @@ const SearchBar = () => {
           className="bg-black text-white py-2 px-3 md:py-5 md:px-5 pr-24 border border-gray-600 rounded-2xl w-full focus:outline-none"
         />
         <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-          <button className="search-button bg-gray-900 text-gray-500 rounded-full py-2 px-2  md:py-3 md:px-5 text-sm md:text-xl hover:scale-110">Explore</button>
+          <button className="search-button bg-gray-900 text-gray-500 rounded-full py-2 px-2 w-full  md:py-3 md:px-5 text-sm md:text-xl hover:scale-110">Explore</button>
         </div>
       </div>
     </div>

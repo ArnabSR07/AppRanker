@@ -176,9 +176,9 @@ const Admin = () => {
   return (
     <div className="relative">
       {/* Mobile header */}
-      <div className="lg:hidden ms-6 h-14 w-14 text-center flex items-center rounded-full bg-cyan-900 ps-2 pe-2">
+      <div className="lg:hidden ms-6 h-10 w-10 text-center flex items-center rounded-full bg-cyan-900 px-2">
         <button onClick={() => setMenuOpen(true)}>
-          <RiAdminLine  className="text-white h-10 w-10" />
+          <RiAdminLine  className="text-white h-5 w-5" />
         </button>
       </div>
 

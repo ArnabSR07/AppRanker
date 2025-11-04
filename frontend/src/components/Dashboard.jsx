@@ -54,11 +54,12 @@ const Dashboard = () => {
         {/* For smaller Screens */}
 
         <div className="lg:hidden flex flex-col gap-3 p-3 rounded-xl justify-center items-center bg-cyan-900">
-
+          
+          <div className="text-xs font-bold text-white text-center">Date Range: </div>{" "}
           <div className="flex gap-2">
              
 
-              <div className="text-xs font-bold text-white">Date Range: </div>{" "}
+              
           <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
             7 Days
           </div>
@@ -101,29 +102,29 @@ const Dashboard = () => {
 
         {/* Revenue Section */}
 
-        <div className="flex justify-center items-center gap-2 md:gap-4 lg:gap-6">
-          <div className="rounded-lg p-3 h-22 bg-green-900 w-30 md:w-full">
-            <div className="flex justify-between items-center">
-              <p className="text-gray-400 text-sm xl:text-base">Total Revenue</p>
+        <div className="flex flex-col sm:flex-row  justify-center items-center gap-2 md:gap-4 lg:gap-6">
+          <div className="rounded-lg p-3 h-22 bg-green-900  w-full">
+            <div className="flex justify-between items-center mb-5 sm:mb-0">
+              <p className="text-gray-400 text-md xl:text-base">Total Revenue</p>
               <BiDollar className="text-green-500 h-3 w-5 md:h-6 md:w-10" />
             </div>
             <div className="text-lg md:text-xl lg:text-3xl font-bold text-white">$32</div>
           </div>
-          <div className="rounded-lg p-2 md:p-3 h-22 bg-blue-900 w-30 md:w-full">
-            <div className="flex justify-between items-center">
-              <p className="text-gray-400 text-xs xl:text-sm">Vendor Conversion Rate</p>
+          <div className="rounded-lg p-2 md:p-3 h-22 bg-blue-900  w-full">
+            <div className="flex justify-between items-center mb-5 sm:mb-0">
+              <p className="text-gray-400 text-md xl:text-base">Vendor Conversion Rate</p>
               <BsGraphUpArrow className="text-blue-600 h-3 w-5 md:h-6 md:w-10"/>
             </div>
             <div className="text-lg md:text-xl xl:text-3xl font-bold text-white">66.7%</div>
           </div>
-          <div className="rounded-lg p-3 h-22 bg-purple-900 w-30 md:w-full">
+          <div className="rounded-lg p-3 h-22 bg-purple-900  w-full">
             <div className="flex justify-between items-center mb-5 md:mb-0">
               <p className="text-gray-400 text-md xl:text-base ">GMV</p>
               <TbMathMaxMin className="text-purple-600 h-3 w-5 md:h-6 md:w-10" />
             </div>
             <div className="text-lg md:text-xl lg:text-3xl font-bold text-white">$320</div>
           </div>
-          <div className="rounded-lg p-3 h-22 bg-amber-950 w-30 md:w-full">
+          <div className="rounded-lg p-3 h-22 bg-amber-950  w-full">
             <div className="flex justify-between items-center mb-5 md:mb-0">
               <p className="text-gray-400 text-md xl:text-base">ARR</p>
               <SlRocket className="text-amber-600 h-3 w-5 md:h-6 md:w-10" />
