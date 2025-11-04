@@ -16,22 +16,24 @@ const Dashboard = () => {
     <div>
       <div className="relative z-20 flex flex-col gap-5 mb-5">
         {/* Date Section */}
-        <div className="bg-cyan-900 flex justify-start items-center gap-4 px-3 py-2 rounded-xl">
+
+        {/* For desktop */}
+        <div className="hidden lg:bg-cyan-900 lg:flex justify-start items-center gap-2 lg:gap-4 px-1 lg:px-3 py-2 rounded-xl">
           <MdOutlineCalendarMonth className="text-cyan-500" />{" "}
-          <div className="text-lg font-bold text-white">Date Range: </div>{" "}
-          <div className="rounded-lg text-gray-400 bg-cyan-950 px-3 py-2">
+          <div className="text-xs lg:text-lg font-bold text-white">Date Range: </div>{" "}
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
             7 Days
           </div>
-          <div className="rounded-lg text-gray-400 bg-cyan-950 px-3 py-2">
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
             30 Days
           </div>
-          <div className="rounded-lg text-gray-400 bg-cyan-950 px-3 py-2">
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
             3 Months
           </div>
-          <div className="rounded-lg text-gray-400 bg-cyan-950 px-3 py-2">
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
             6 Months
           </div>
-          <div className="rounded-lg text-gray-400 bg-cyan-950 px-3 py-2">
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
             1 Year
           </div>
           <div className="flex justify-between gap-5 items-center bg-cyan-950 px-3 py-2 rounded-lg">
@@ -49,36 +51,84 @@ const Dashboard = () => {
           </div>
         </div>
 
+        {/* For smaller Screens */}
+
+        <div className="lg:hidden flex flex-col gap-3 p-3 rounded-xl justify-center items-center bg-cyan-900">
+
+          <div className="flex gap-2">
+             
+
+              <div className="text-xs font-bold text-white">Date Range: </div>{" "}
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
+            7 Days
+          </div>
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
+            30 Days
+          </div>
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
+            3 Months
+          </div>
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
+            6 Months
+          </div>
+          <div className="rounded-lg text-xs lg:text-base text-gray-400 bg-cyan-950 px-3 py-2">
+            1 Year
+          </div>
+        
+          </div>
+
+          <div>
+
+           <div className="flex justify-between gap-5 items-center bg-cyan-950 px-3 py-2 rounded-lg">
+            <span className="text-gray-400">
+              04<span>/</span>22<span>/</span>2025
+            </span>
+            <MdOutlineCalendarMonth className="text-black" />
+          </div>
+          <div className="text-white flex items-center justify-center my-2">to</div>
+          <div className="flex justify-between gap-5 items-center bg-cyan-950 px-3 py-2 rounded-lg">
+            <span className="text-gray-400">
+              10<span>/</span>22<span>/</span>2025
+            </span>
+            <MdOutlineCalendarMonth className="text-black" />
+          </div>
+
+          </div>
+
+         
+
+        </div>
+
         {/* Revenue Section */}
 
-        <div className="flex justify-center items-center gap-6">
-          <div className="rounded-lg p-3 bg-green-900 w-full">
+        <div className="flex justify-center items-center gap-2 md:gap-4 lg:gap-6">
+          <div className="rounded-lg p-3 h-22 bg-green-900 w-30 md:w-full">
             <div className="flex justify-between items-center">
-              <p className="text-gray-400">Total Revenue</p>
-              <BiDollar className="text-green-500 h-6 w-10" />
+              <p className="text-gray-400 text-sm xl:text-base">Total Revenue</p>
+              <BiDollar className="text-green-500 h-3 w-5 md:h-6 md:w-10" />
             </div>
-            <div className="text-3xl font-bold text-white">$32</div>
+            <div className="text-lg md:text-xl lg:text-3xl font-bold text-white">$32</div>
           </div>
-          <div className="rounded-lg p-3 bg-blue-900 w-full">
+          <div className="rounded-lg p-2 md:p-3 h-22 bg-blue-900 w-30 md:w-full">
             <div className="flex justify-between items-center">
-              <p className="text-gray-400">Vendor Conversion Rate</p>
-              <BsGraphUpArrow className="text-blue-600 h-6 w-10" />
+              <p className="text-gray-400 text-xs xl:text-sm">Vendor Conversion Rate</p>
+              <BsGraphUpArrow className="text-blue-600 h-3 w-5 md:h-6 md:w-10"/>
             </div>
-            <div className="text-3xl font-bold text-white">66.7%</div>
+            <div className="text-lg md:text-xl xl:text-3xl font-bold text-white">66.7%</div>
           </div>
-          <div className="rounded-lg p-3 bg-purple-900 w-full">
-            <div className="flex justify-between items-center">
-              <p className="text-gray-400">GMV</p>
-              <TbMathMaxMin className="text-purple-600 h-6 w-10" />
+          <div className="rounded-lg p-3 h-22 bg-purple-900 w-30 md:w-full">
+            <div className="flex justify-between items-center mb-5 md:mb-0">
+              <p className="text-gray-400 text-md xl:text-base ">GMV</p>
+              <TbMathMaxMin className="text-purple-600 h-3 w-5 md:h-6 md:w-10" />
             </div>
-            <div className="text-3xl font-bold text-white">$320</div>
+            <div className="text-lg md:text-xl lg:text-3xl font-bold text-white">$320</div>
           </div>
-          <div className="rounded-lg p-3 bg-amber-950 w-full">
-            <div className="flex justify-between items-center">
-              <p className="text-gray-400">ARR</p>
-              <SlRocket className="text-amber-600 h-6 w-10" />
+          <div className="rounded-lg p-3 h-22 bg-amber-950 w-30 md:w-full">
+            <div className="flex justify-between items-center mb-5 md:mb-0">
+              <p className="text-gray-400 text-md xl:text-base">ARR</p>
+              <SlRocket className="text-amber-600 h-3 w-5 md:h-6 md:w-10" />
             </div>
-            <div className="text-3xl font-bold text-white">$239.76</div>
+            <div className="text-lg md:text-xl lg:text-3xl font-bold text-white">$239.76</div>
           </div>
         </div>
 
@@ -91,14 +141,15 @@ const Dashboard = () => {
 
         {/* Analytics */}
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
           <div className="bg-cyan-900 rounded-lg w-full p-3 border border-cyan-500 h-80">
             <div className="flex justify-between items-center ">
               <p className="text-cyan-400">New Users</p>
               <RiAccountPinCircleLine className="h-6 w-10 text-cyan-400" />
             </div>
             <div className="text-3xl font-bold text-white">347</div>
-            <Bargraph />
+            <div className="flex items-center justify-center"><Bargraph /></div>
+            
           </div>
           <div className="bg-[#5413bd] rounded-lg w-full p-3 border border-purple-500 h-80">
             <div className="flex justify-between items-center">

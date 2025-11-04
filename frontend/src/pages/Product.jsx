@@ -28,13 +28,13 @@ const Product = () => {
 
   return (
     <div>
-      <div className="relative z-20 flex items-center justify-center gap-3">
+      <div className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-3">
         {/* Gallery on the left */}
 
         <AnimatePresence>
           {showGallery && (
             <motion.div
-              className=" flex w-[30%] h-[650px]"
+              className=" flex items-center justify-center w-[70%] md:w-[30%] h-[70%] md:h-full"
               variants={panelVariants}
               initial="hidden"
               animate="visible"
@@ -49,20 +49,20 @@ const Product = () => {
                   />
                 </div>
                 <div
-                  className="h-72 w-full mb-10 rounded-2xl border border-gray-600"
+                  className="h-44 md:h-72 w-full mb-6 md:mb-10 rounded-2xl border border-gray-600"
                   style={{
                     backgroundImage: `url(${product.images[imageIndex]})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 ></div>
-                <div className="grid grid-cols-3 gap-10 ">
+                <div className="grid grid-cols-3 gap-5 md:gap-10 ">
                   {product.images.map((image, index) => {
                     return (
                       <div
                         key={index}
                         onClick={() => setImageIndex(index)}
-                        className="w-28 h-20 rounded-xl border border-gray-500 cursor-pointer"
+                        className="w-20 md:w-28 h-16 rounded-xl border border-gray-500 cursor-pointer"
                         style={{
                           backgroundImage: `url(${product.images[index]})`,
                           backgroundSize: "cover",
@@ -77,10 +77,12 @@ const Product = () => {
           )}
         </AnimatePresence>
 
+        {/* Card */}
+
         <motion.div
         layout
         transition={{ delay:0.2,duration: 1, ease: "easeInOut" }}
-          className="bg-[#15152b] h-[650px] w-[40%] rounded-xl p-2 mb-3 mx-3"
+          className="bg-[#15152b] h-[70%] w-[70%] md:w-[40%] rounded-xl p-2 mb-3 mx-3"
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{
             opacity: 1,
@@ -99,11 +101,11 @@ const Product = () => {
 
           <img
             src={product.images[0]}
-            className="object-cover h-[40%] w-full mt-2 rounded-md"
+            className="object-cover h-[20%] w-full mt-2 rounded-md"
             alt=""
           />
           <div className="mt-2 px-2 flex justify-between">
-            <h2 className="text-white text-lg font-bold">{product.title}</h2>
+            <h2 className="text-white text-sm md:text-lg font-bold">{product.title}</h2>
             <p>
               <span className="text-gray-700 line-through">
                 ${product.oldPrice}
@@ -144,7 +146,7 @@ const Product = () => {
                 setShowGallery(!showGallery);
                 setShowInfo(false);
               }}
-              className="w-full text-white rounded-md text-center border border-gray-600 hover:text-blue-700 hover:border-blue-700 hover:cursor-pointer py-2"
+              className="w-full text-white rounded-md text-center border border-gray-600 text-xs hover:text-blue-700 hover:border-blue-700 hover:cursor-pointer md:text-base py-1 md:py-2"
             >
               Gallery
             </button>
@@ -153,14 +155,14 @@ const Product = () => {
                 setShowInfo(!showInfo);
                 setShowGallery(false);
               }}
-              className="w-full text-white rounded-md text-center border border-gray-600 hover:text-blue-700 hover:border-blue-700 hover:cursor-pointer py-2"
+              className="w-full text-white rounded-md text-center border border-gray-600 hover:text-blue-700 text-xs md:text-base over:border-blue-700 hover:cursor-pointer py-1 md:py-2"
             >
               More info
             </button>
           </div>
 
           <div className="px-2 mt-3">
-            <button className="text-center w-full  rounded-md bg-blue-400 text-white semi-bold text-lg py-3">
+            <button className="text-center w-full  rounded-md bg-blue-400 text-white semi-bold text-sm md:text-lg py-2 md:py-3">
               Buy Now
             </button>
           </div>
@@ -171,7 +173,7 @@ const Product = () => {
         <AnimatePresence>
           {showInfo && (
             <motion.div
-              className=" flex w-[30%] h-[650px]"
+              className=" flex w-[70%] md:w-[30%] h-[70%] md:h-full mb-3"
               variants={panelVariants}
               initial="hidden"
               animate="visible"
@@ -185,7 +187,7 @@ const Product = () => {
                     className="text-white cursor-pointer"
                   />
                 </div>
-                <p className="text-white text-lg mb-5">
+                <p className="text-white text-sm md:text-lg mb-5">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Adipisci, iste. Aliquid excepturi doloremque minima provident
                   esse nostrum, quasi quia eligendi repellat, explicabo unde
@@ -193,19 +195,19 @@ const Product = () => {
                 </p>
                 <h5 className="text-gray-500 mb-2">FAQ</h5>
 
-                <div className="flex items-center justify-between w-full text-lg text-white py-2">
+                <div className="flex items-center justify-between w-full text-sm md:text-lg text-white py-2">
                   <div>What is the price for app?</div> <div>+</div>
                 </div>
                 <hr className="text-gray-800" />
-                <div className="flex items-center justify-between w-full text-lg text-white py-2">
+                <div className="flex items-center justify-between w-full text-sm md:text-lg text-white py-2">
                   <div>Where can I buy it?</div> <div>+</div>
                 </div>
                 <hr className="text-gray-800" />
-                <div className="flex items-center justify-between w-full text-lg text-white py-2">
+                <div className="flex items-center justify-between w-full text-sm md:text-lg text-white py-2">
                   <div>What is the connection speed?</div> <div>+</div>
                 </div>
                 <hr className="text-gray-800" />
-                <div className="flex items-center justify-between w-full text-lg text-white py-2">
+                <div className="flex items-center justify-between w-full text-sm md:text-lg text-white py-2">
                   <div>Can I create presentations with this app?</div>{" "}
                   <div>+</div>
                 </div>

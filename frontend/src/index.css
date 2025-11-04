@@ -1,19 +1,18 @@
 @import "tailwindcss";
 
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 
-#decision{
-  background:linear-gradient(to right,rgb(0, 72, 255),rgb(14, 158, 14));
-   -webkit-background-clip: text;
+#decision {
+  background: linear-gradient(to right, rgb(0, 72, 255), rgb(14, 158, 14));
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.dashboard-box{
-    background:linear-gradient(to right bottom,#133b51 10%,#021b29);
+.dashboard-box {
+  background: linear-gradient(to right bottom, #133b51 10%, #021b29);
 }
-
 
 /* CYAN CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
@@ -25,12 +24,13 @@ button:hover{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #06b6d4;       /* cyan-500 */
+  background-color: #06b6d4; /* cyan-500 */
   border-radius: 9999px;
   transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #22d3ee;       /* cyan-400 */
-  box-shadow: 0 0 10px #22d3ee;    /* glowing hover effect */
+  background-color: #22d3ee; /* cyan-400 */
+  box-shadow: 0 0 10px #22d3ee; /* glowing hover effect */
 }
+

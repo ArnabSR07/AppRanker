@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -64,8 +65,10 @@ export const MovingBorder = ({
 }) => {
   const pathRef = useRef();
   const progress = useMotionValue(0);
+  const [pathReady, setPathReady] = useState(false);
 
   useAnimationFrame((time) => {
+     if (!pathReady || !pathRef.current) return;
     const length = pathRef.current?.getTotalLength();
     if (length) {
       const pxPerMillisecond = length / duration;
@@ -73,8 +76,16 @@ export const MovingBorder = ({
     }
   });
 
-  const x = useTransform(progress, (val) => pathRef.current?.getPointAtLength(val).x);
-  const y = useTransform(progress, (val) => pathRef.current?.getPointAtLength(val).y);
+ const x = useTransform(progress, (val) => {
+    if (!pathReady || !pathRef.current) return 0;
+    return pathRef.current.getPointAtLength(val).x;
+  });
+
+  const y = useTransform(progress, (val) => {
+    if (!pathReady || !pathRef.current) return 0;
+    return pathRef.current.getPointAtLength(val).y;
+  });
+
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
 

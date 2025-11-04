@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import HalfRating from "./HalfRating";
 import { motion } from "framer-motion";
+import { BsGlobe2 } from "react-icons/bs";
+import { TiDeviceDesktop } from "react-icons/ti";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProductComparisionCard = ({ product }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const len = product.images.length;
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % len);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + len) % len);
+  };
+
   return (
     <motion.div
       className="relative z-20 bg-[#121212]  rounded-3xl text-white p-6 flex flex-col justify-between w-full md:w-[350px] shadow-lg border hover:border-gray-500 cursor-pointer border-neutral-800"
@@ -25,10 +38,19 @@ const ProductComparisionCard = ({ product }) => {
 
       {/* Image */}
       <img
-        src={product.images[0]}
+        src={product.images[currentIndex]}
         alt={product.title}
-        className="rounded-xl mb-4 border h-[30%] border-neutral-700"
+        className="rounded-xl mb-4 border h-60 border-neutral-700"
       />
+
+      <div className="flex gap-3 mb-2">
+        <div className="border border-gray-600 rounded-full px-1 py-1 cursor-pointer">
+          <ChevronLeft onClick={prevSlide} className="text-white" />
+        </div>
+        <div className="border border-gray-600 rounded-full px-1 py-1 cursor-pointer">
+          <ChevronRight onClick={nextSlide} className="text-white" />
+        </div>
+      </div>
 
       {/* Info */}
       <h2 className="text-xl font-semibold mb-2">{product.title}</h2>
@@ -46,7 +68,7 @@ const ProductComparisionCard = ({ product }) => {
 
       {/* Features */}
       <div className="mb-4">
-        <h3 className="text-sm text-neutral-300 font-semibold mb-1">
+        <h3 className="text-sm text-neutral-300 font-semibold mb-3">
           Key Features
         </h3>
         <ul className="space-y-1 text-sm text-neutral-400">
@@ -58,7 +80,7 @@ const ProductComparisionCard = ({ product }) => {
 
       {/* Benefits */}
       <div className="mb-4">
-        <h3 className="text-sm text-neutral-300 font-semibold mb-1">
+        <h3 className="text-sm text-neutral-300 font-semibold mb-3">
           Key Benefits
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -70,6 +92,38 @@ const ProductComparisionCard = ({ product }) => {
               {b}
             </span>
           ))}
+        </div>
+      </div>
+
+      {/* Teams */}
+      <div className="mb-4">
+        <h3 className="text-sm text-neutral-300 font-semibold mb-2">
+          Target Audience
+        </h3>
+
+        <div className="text-sm text-gray-400">Teams</div>
+      </div>
+
+      {/* Platforms */}
+
+      <div className="mb-4">
+        <h3 className="text-sm text-neutral-300 font-semibold mb-2">
+          Supported Platforms
+        </h3>
+
+        <div className="flex gap-5 justify-start items-center">
+          <div>
+            <div className="bg-gray-800 rounded-md p-2">
+              <BsGlobe2 className="text-blue-600" />
+            </div>
+            <p className="text-gray-500 text-xs text-center">Web</p>
+          </div>
+          <div>
+            <div className="bg-gray-800 rounded-md p-2 w-8">
+              <TiDeviceDesktop className="text-green-600" />
+            </div>
+            <p className="text-gray-500 text-xs text-center">Desktop</p>
+          </div>
         </div>
       </div>
 

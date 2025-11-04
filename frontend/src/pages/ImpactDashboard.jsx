@@ -3,6 +3,7 @@ import { CiPen } from "react-icons/ci";
 import { RiGroupLine } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
+import { BsGraphUpArrow } from "react-icons/bs";
 
 
 const Counter = ({ target }) => {
@@ -36,10 +37,11 @@ const ImpactDashboard = () => {
       <h1 className="text-3xl font-bold text-white mb-10 text-center">
         Your Impact Dashboard
       </h1>
-      <div className="grid grid-cols-3 gap-14">
+      {/* For desktop */}
+      <div className="hidden lg:grid grid-cols-3 gap-14">
         <div className="flex flex-col justify-center items-center gap-10">
           <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500">
-            <h3 className="text-gray-400">Discovery Score</h3>
+            <h3 className="text-gray-400"><BsStars className="w-10 h-8 text-green-400 inline-block"/>Discovery Score</h3>
             {/* animated counter */}
             <h4 className="text-4xl font-bold text-white my-8">
               <Counter target={482} />
@@ -50,7 +52,7 @@ const ImpactDashboard = () => {
             </p>
           </div>
           <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500">
-            <h3 className="text-gray-400">Creator Score</h3>
+            <h3 className="text-gray-400"><CiPen className="w-10 h-8 text-green-400 inline-block"/>Creator Score</h3>
             <h4 className="text-4xl font-bold text-white my-8">
               <Counter target={96} />
             </h4>
@@ -62,8 +64,8 @@ const ImpactDashboard = () => {
         </div>
 
       
-        <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center">
-          <h3 className="text-gray-400">Impact Score</h3>
+        <div className="animated-box dashboard-box p-10 rounded-2xl relative flex flex-col justify-center items-center">
+          <h3 className="text-gray-400"><FaRegHeart className="h-8 w-10 text-green-400 inline-block"/>Impact Score</h3>
           <h4 className="text-5xl font-bold text-white my-8">
             <Counter target={900} />
           </h4>
@@ -74,7 +76,7 @@ const ImpactDashboard = () => {
 
         <div className="flex flex-col justify-center items-center gap-10">
           <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500">
-            <h3 className="text-gray-400">Discovery Score</h3>
+            <h3 className="text-gray-400"><RiGroupLine className="w-10 h-8 text-green-400 inline-block"/>Influence Score</h3>
             <h4 className="text-4xl font-bold text-white my-8">
               <Counter target={668} />
             </h4>
@@ -84,7 +86,76 @@ const ImpactDashboard = () => {
             </p>
           </div>
           <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500">
-            <h3 className="text-gray-400">Creator Score</h3>
+            <h3 className="text-gray-400"><BsGraphUpArrow className="text-green-400 w-10 h-8 inline-block"/>Loyalty Score</h3>
+            <h4 className="text-4xl font-bold text-white my-8">
+              <Counter target={121} />
+            </h4>
+            <p className="text-lg text-gray-400 text-center">
+              Measures your activity, curiosity, and exploration across the
+              platform
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      {/* For Mobile */}
+
+       <div className="lg:hidden grid  grid-cols-1 gap-8">
+        <div className="flex flex-col justify-center items-center gap-10 ">
+
+        <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500 w-80">
+            <h3 className="text-gray-400"><FaRegHeart className="w-10 h-8 text-green-400 inline-block"/>Impact Score</h3>
+            {/* animated counter */}
+            <h4 className="text-4xl font-bold text-white my-8">
+              <Counter target={900} />
+            </h4>
+            <p className="text-lg text-gray-400 text-center">
+            Total Points
+            </p>
+          </div>
+
+
+          <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500 w-80">
+            <h3 className="text-gray-400"><BsStars className="w-10 h-8 text-green-400 inline-block"/>Discovery Score</h3>
+            {/* animated counter */}
+            <h4 className="text-4xl font-bold text-white my-8">
+              <Counter target={482} />
+            </h4>
+            <p className="text-lg text-gray-400 text-center">
+              Measures your activity, curiosity, and exploration across the
+              platform
+            </p>
+          </div>
+          <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500 w-80">
+            <h3 className="text-gray-400"><CiPen className="w-10 h-8 text-green-400 inline-block"/>Creator Score</h3>
+            <h4 className="text-4xl font-bold text-white my-8">
+              <Counter target={96} />
+            </h4>
+            <p className="text-lg text-gray-400 text-center">
+              Measures your activity, curiosity, and exploration across the
+              platform
+            </p>
+          </div>
+        </div>
+
+      
+        
+       
+
+        <div className="flex flex-col justify-center items-center gap-10">
+          <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500 w-80">
+            <h3 className="text-gray-400"><RiGroupLine className="w-10 h-8 text-green-400 inline-block"/>Influence Score</h3>
+            <h4 className="text-4xl font-bold text-white my-8">
+              <Counter target={668} />
+            </h4>
+            <p className="text-lg text-gray-400 text-center">
+              Measures your activity, curiosity, and exploration across the
+              platform
+            </p>
+          </div>
+          <div className="dashboard-box p-10 rounded-2xl relative z-20 flex flex-col justify-center items-center border-gray-500 w-80">
+            <h3 className="text-gray-400"><BsGraphUpArrow className="text-green-400 w-10 h-8 inline-block"/>Loyalty Score</h3>
             <h4 className="text-4xl font-bold text-white my-8">
               <Counter target={121} />
             </h4>
@@ -98,7 +169,7 @@ const ImpactDashboard = () => {
 
    {/* Legend */}
 
-   <div className=" relative z-20 dashboard-box grid grid-cols-4 rounded-md w-full gap-5 my-10 p-5">
+   <div className=" relative z-20 dashboard-box grid grid-cols-1 lg:grid-cols-4 rounded-md w-full gap-8 lg:gap-5 my-10 p-5">
 
     <div className="flex">
       

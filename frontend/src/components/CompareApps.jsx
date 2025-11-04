@@ -12,7 +12,7 @@ const CompareApps = () => {
   const [input2, setInput2] = useState({});
 
   return (
-    <div>
+    <div className="h-screen">
       <h2 className="text-3xl text-white font-bold mb-5">
         App Comaprision Tool
       </h2>
@@ -22,7 +22,7 @@ const CompareApps = () => {
           <div className="relative flex items-center justify-center">
             <input
               type="text"
-              className="rounded-md bg-cyan-950 text-white px-3 py-3 w-full"
+              className="rounded-md bg-cyan-950 text-xs md:text-base text-white px-3 py-3 w-full"
               placeholder={input1.title}
               value={input1.title}
               onChange={(e) => setInput1(e.target.value)}
@@ -33,7 +33,7 @@ const CompareApps = () => {
             />
           </div>
           {showDropDown1 && (
-            <div className=" bg-black absolute rounded-lg w-80">
+            <div className=" bg-black absolute rounded-lg w-40 md:w-80">
               {products.map((product, index) => {
                 return (
                   <div
@@ -58,7 +58,7 @@ const CompareApps = () => {
           <div className="relative flex items-center justify-center">
             <input
               type="text"
-              className="rounded-md bg-cyan-950 text-white px-3 py-3 w-full"
+              className="rounded-md bg-cyan-950 text-xs md:text-base text-white px-3 py-3 w-full"
               value={input2.title}
               placeholder={input2.title}
               onChange={()=>setInput2(e.target.value)}
@@ -69,7 +69,7 @@ const CompareApps = () => {
             />
           </div>
           {showDropDown2 && (
-            <div className="bg-black absolute rounded-lg w-80">
+            <div className="bg-black absolute rounded-lg w-40 md:w-80">
               {products.map((product, index) => {
                 return (
                   <div
@@ -105,9 +105,9 @@ const CompareApps = () => {
         ease: "easeInOut",
       }} className="bg-cyan-950 rounded-xl mb-3">
         <div className="flex justify-center  bg-cyan-700 items-center rounded-t-xl px-8 py-3">
-          <h3 className="text-gray-300 w-full">FEATURE</h3>
-          <h3 className="text-gray-300 w-full">{input1.title ? input1.title.toUpperCase() : ""}</h3>
-          <h3 className="text-gray-300 w-full">{input2.title ? input2.title.toUpperCase() : ""}</h3>
+          <h3 className="text-gray-300 text-xs md:text-base w-full">FEATURE</h3>
+          <h3 className="text-gray-300 text-xs md:text-base w-full">{input1.title ? input1.title.toUpperCase() : ""}</h3>
+          <h3 className="text-gray-300 text-xs md:text-base w-full">{input2.title ? input2.title.toUpperCase() : ""}</h3>
         </div>
         <div className="flex justify-center items-center px-8 py-2">
           <h5 className="font-bold text-white w-full">Logo</h5>
@@ -121,70 +121,70 @@ const CompareApps = () => {
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Vendor</h5>
-          <div className="w-full text-gray-300">{input1.vendor}</div>
-          <div className="w-full text-gray-300">{input2.vendor}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Vendor</h5>
+          <div className="w-full text-gray-300 text-xs md:text-base">{input1.vendor}</div>
+          <div className="w-full text-gray-300 text-xs md:text-base">{input2.vendor}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Category</h5>
-          <div className="w-full text-gray-300">{input1.category}</div>
-          <div className="w-full text-gray-300">{input2.category}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Category</h5>
+          <div className="w-full text-gray-300 text-xs md:text-base">{input1.category}</div>
+          <div className="w-full text-gray-300 text-xs md:text-base">{input2.category}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Pricing</h5>
-          <div className="w-full text-gray-300">${input1.pricing}/month</div>
-          <div className="w-full text-gray-300">${input2.pricing}/month</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Pricing</h5>
+          <div className="w-full text-gray-300 text-xs md:text-base">${input1.pricing}/month</div>
+          <div className="w-full text-gray-300 text-xs md:text-base">${input2.pricing}/month</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Code Editor</h5>
-          <div className="w-full text-gray-300">{input1.codeEditor ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
-          <div className="w-full text-gray-300">{input2.codeEditor ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Code Editor</h5>
+          <div className="w-full text-gray-300">{input1.codeEditor ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input2.codeEditor ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Debugger</h5>
-          <div className="w-full text-gray-300">{input1.debugger ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
-          <div className="w-full text-gray-300">{input2.debugger ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Debugger</h5>
+          <div className="w-full text-gray-300">{input1.debugger ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input2.debugger ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">
+          <h5 className="font-bold text-white text-xs md:text-base w-full">
             Version Control Integration
           </h5>
-          <div className="w-full text-gray-300">{input1.versionControl ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
-          <div className="w-full text-gray-300">{input2.versionControl ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input1.versionControl ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input2.versionControl ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Lead Management</h5>
-          <div className="w-full text-gray-300">{input1.leadManagement ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
-          <div className="w-full text-gray-300">{input2.leadManagement ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Lead Management</h5>
+          <div className="w-full text-gray-300">{input1.leadManagement ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input2.leadManagement ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Sales Automation</h5>
-          <div className="w-full text-gray-300">{input1.salesAutomation ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
-          <div className="w-full text-gray-300">{input2.salesAutomation ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Sales Automation</h5>
+          <div className="w-full text-gray-300">{input1.salesAutomation ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input2.salesAutomation ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
         </div>
         <hr className="text-gray-700" />
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full">Customer Support</h5>
-          <div className="w-full text-gray-300">{input1.customerSupport ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
-          <div className="w-full text-gray-300">{input1.customerSupport ? <TiTick className="w-6 h-6 text-green-500"/> : <ImCross className="w-5 h-3 text-red-500"/>}</div>
+          <h5 className="font-bold text-white text-xs md:text-base w-full">Customer Support</h5>
+          <div className="w-full text-gray-300">{input1.customerSupport ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
+          <div className="w-full text-gray-300">{input1.customerSupport ? <TiTick className="w-4 h-4 md:w-6 md:h-6 text-green-500"/> : <ImCross className="w-3 h-2 md:w-5 md:h-3 text-red-500"/>}</div>
         </div>
 
         <div className="flex justify-center items-center px-8 py-2">
-          <h5 className="font-bold text-white w-full"></h5>
+          <h5 className="font-bold text-white text-xs md:text-base w-full"></h5>
           <div className="w-full text-gray-300">
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-md">
+            <button className="bg-blue-600 text-white text-sm md:text-base px-2 md:px-5 py-1 md:py-2 rounded-md">
               Buy Now
             </button>
           </div>
           <div className="w-full text-gray-300">
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-md">
+            <button className="bg-blue-600 text-white text-sm md:text-base px-2 md:px-5 py-1 md:py-2 rounded-md">
               Buy Now
             </button>
           </div>
