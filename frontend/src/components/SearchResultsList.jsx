@@ -50,42 +50,30 @@ const SearchResultsList = () => {
      
 
       {filteredProducts.length == 0 && (<div className="flex items-center justify-center mt-10 gap-4">
-        <button className="z-50 bg-black text-white px-2 py-2 rounded-full border border-gray-600"><ImPlus className="text-green-500 inline-block me-1"/>Add your App</button>
+        <button className="z-50 bg-black text-white px-2 py-2 text-xs rounded-full border border-gray-600"><ImPlus className="text-green-500 inline-block me-1"/>Add your App</button>
          <button className="relative bg-gray-900 text-gray-500 rounded-full py-2 px-2 text-sm md:text-xl hover:scale-110"><FaMagic className="text-gray-500 inline-block me-1"/>Explore</button>
       </div>)}
 
        {/* product cards Mobile View */}
 
-      {/* {filteredProducts.length > 0 && (<div className="flex gap-2 w-full h-80 justify-center items-center md:hidden">
-       <div className="h-15 w-15 rounded-full flex items-center justify-center bg-black">
-         <ChevronLeft onClick={prevSlide}/>
-       </div>
-
-       <ProductCard product={filteredProducts[currentIndex]}/>
-
-       <div className="h-15 w-15 rounded-full flex items-center justify-center bg-black">
-         <ChevronRight onClick={nextSlide}/>
-       </div>
-      </div>)} */}
-
       {filteredProducts.length > 0 && (
         <div
           className="
-            md:hidden w-full mt-4 overflow-x-auto
+            md:hidden w-full mt-1 overflow-x-auto
             scrollbar scrollbar-thin
             scrollbar-thumb-gray-600 scrollbar-track-gray-800
             scrollbar-thumb-rounded-full scrollbar-track-rounded-full
           "
           style={{
-            scrollbarColor: "#03fc07 #687369", // thumb gray-600, track gray-800
+            scrollbarColor: "#03fc07 #687369", 
             scrollbarWidth: "thin",
           }}
         >
-          <div className="flex gap-3 px-3 py-2">
+          <div className="flex  gap-1 px-3 py-2">
             {filteredProducts.map((product, index) => (
               <motion.div
                 key={index}
-                className="shrink-0 w-[250px] h-80"
+                className="shrink-0 w-full h-80"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3, ease: easeInOut }}
               >
@@ -98,7 +86,7 @@ const SearchResultsList = () => {
 
       {/* button below the cards */}
       {filteredProducts.length > 0 && (
-        <div className="relative z-20 flex items-center justify-center bottom-4 mt-6">
+        <div className="relative z-20 flex items-center justify-center  bottom-6 mt-6">
           <Link to="/comparision">
             <button className="bg-blue-600 text-sm text-white rounded-md px-3  md:rounded-full md:px-6 py-2">
               Compare these options
