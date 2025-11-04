@@ -119,7 +119,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <Link to="impact-dashboard" onClick={()=>setShowMenu(!showMenu)}>
+          <Link to="impact-dashboard" onClick={()=>setShow(!showMenu)}>
             <div className="flex items-center justify-start gap-5 px-2 py-2 hover:bg-cyan-600">
               <GiTrophyCup className="h-4 w-4 text-cyan-500" />
               <span className="text-white text-xs md:text-base font-semibold">Your Score</span>
