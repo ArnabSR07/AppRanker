@@ -23,7 +23,7 @@ const ProductCard = ({ product, isHovered }) => {
     <>
     <motion.div
     onClick={()=>handleClick(product.id)}
-      className="relative z-20 border border-gray-500 p-2 bg-black rounded-2xl w-[80%] md:w-full  h-[60%] md:h-[80%] opacity-100 cursor-pointer hover:rounded-2xl"
+      className="relative z-20 border border-gray-500 p-2 bg-black rounded-2xl w-full md:w-full  h-[80%] opacity-100 cursor-pointer hover:rounded-2xl"
       animate={{
         scale: isHovered ? 1.03 : 1,
       }}
@@ -35,7 +35,7 @@ const ProductCard = ({ product, isHovered }) => {
         alt=""
       />
       <div className="flex justify-between items-center">
-        <div className="mt-5">
+        <div className="mt-2 md:mt-5">
           <img
             src={product.icon}
             className="h-3 w-3 md:h-6 md:w-6 inline-block me-2"

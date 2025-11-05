@@ -73,7 +73,7 @@ const SearchResultsList = () => {
             {filteredProducts.map((product, index) => (
               <motion.div
                 key={index}
-                className="shrink-0 w-full h-80"
+                className="shrink-0 w-full h-54"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3, ease: easeInOut }}
               >
@@ -86,7 +86,7 @@ const SearchResultsList = () => {
 
       {/* button below the cards */}
       {filteredProducts.length > 0 && (
-        <div className="relative z-20 flex items-center justify-center  bottom-6 mt-6">
+        <div className="relative z-20 flex items-center justify-center  bottom-4 mt-6">
           <Link to="/comparision">
             <button className="bg-blue-600 text-sm text-white rounded-md px-3  md:rounded-full md:px-6 py-2">
               Compare these options
