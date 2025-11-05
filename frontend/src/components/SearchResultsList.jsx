@@ -86,7 +86,7 @@ const SearchResultsList = () => {
 
       {/* button below the cards */}
       {filteredProducts.length > 0 && (
-        <div className="relative z-20 flex items-center justify-center  bottom-4 mt-6">
+        <div className="relative z-20 flex items-center justify-center  bottom-4 md:bottom-14 mt-4">
           <Link to="/comparision">
             <button className="bg-blue-600 text-sm text-white rounded-md px-3  md:rounded-full md:px-6 py-2">
               Compare these options
