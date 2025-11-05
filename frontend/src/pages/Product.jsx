@@ -56,13 +56,13 @@ const Product = () => {
                     backgroundPosition: "center",
                   }}
                 ></div>
-                <div className="grid grid-cols-3 gap-5 md:gap-10 ">
+                <div className="grid grid-cols-3 gap-4 md:gap-10 ">
                   {product.images.map((image, index) => {
                     return (
                       <div
                         key={index}
                         onClick={() => setImageIndex(index)}
-                        className="w-20 md:w-28 h-16 rounded-xl border border-gray-500 cursor-pointer"
+                        className="w-18 md:w-28 h-16 rounded-xl border border-gray-500 cursor-pointer"
                         style={{
                           backgroundImage: `url(${product.images[index]})`,
                           backgroundSize: "cover",

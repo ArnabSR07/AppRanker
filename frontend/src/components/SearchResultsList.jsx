@@ -25,7 +25,7 @@ const SearchResultsList = () => {
   };
 
   return (
-    <div className="w-[60%] mx-auto mt-5">
+    <div className="w-[70%] mx-auto mt-5">
       {/* product cards Desktop View */}
       <div className="hidden md:flex gap-4 h-80 justify-center">
         {filteredProducts.slice(0, 3).map((product, index) => {
@@ -49,7 +49,7 @@ const SearchResultsList = () => {
 
      
 
-      {filteredProducts.length == 0 && (<div className="flex items-center justify-center mt-10 gap-4">
+      {filteredProducts.length == 0 && (<div className="flex items-center justify-center mt-10 gap-4 md:hidden">
         <button className="z-50 bg-black text-white px-2 py-2 text-xs rounded-full border border-gray-600"><ImPlus className="text-green-500 inline-block me-1"/>Add your App</button>
          <button className="relative bg-gray-900 text-gray-500 rounded-full py-2 px-2 text-sm md:text-xl hover:scale-110"><FaMagic className="text-gray-500 inline-block me-1"/>Explore</button>
       </div>)}
@@ -58,7 +58,7 @@ const SearchResultsList = () => {
 
       {filteredProducts.length > 0 && (
         <div
-          className="
+          className="mb-2
             md:hidden w-full mt-1 overflow-x-auto
             scrollbar scrollbar-thin
             scrollbar-thumb-gray-600 scrollbar-track-gray-800
@@ -86,7 +86,7 @@ const SearchResultsList = () => {
 
       {/* button below the cards */}
       {filteredProducts.length > 0 && (
-        <div className="relative z-20 flex items-center justify-center  bottom-4 md:bottom-14 mt-4">
+        <div className="relative z-20 flex items-center justify-center  bottom-2 md:bottom-6 xl:bottom-14 mt-4">
           <Link to="/comparision">
             <button className="bg-blue-600 text-sm text-white rounded-md px-3  md:rounded-full md:px-6 py-2">
               Compare these options

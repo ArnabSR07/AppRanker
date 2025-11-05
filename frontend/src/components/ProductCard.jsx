@@ -23,7 +23,7 @@ const ProductCard = ({ product, isHovered }) => {
     <>
     <motion.div
     onClick={()=>handleClick(product.id)}
-      className="relative z-20 border border-gray-500 p-2 bg-black rounded-2xl w-full md:w-full  h-[80%] opacity-100 cursor-pointer hover:rounded-2xl"
+      className="relative z-20 border border-gray-500 p-2 bg-black rounded-2xl w-full md:w-full h-[80%] opacity-100 cursor-pointer hover:rounded-2xl"
       animate={{
         scale: isHovered ? 1.03 : 1,
       }}

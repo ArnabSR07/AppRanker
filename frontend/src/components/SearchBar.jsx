@@ -12,7 +12,7 @@ const SearchBar = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="relative w-[60%]">
+      <div className="relative w-[70%]">
         <input
           type="text"
           value={search}
